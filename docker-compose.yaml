@@ -1,0 +1,14 @@
+version: "3.6"
+
+services:
+  docker-nginx-env:
+    container_name: docker-nginx-env
+    image: docker-nginx-env:1.0.0
+    ports:
+      - "8080:8080"
+    environment:
+      - YISUO_API_PASS=http://127.1.1.1
+    # command: 
+    #   - /bin/bash 
+    #   - c 
+    #   - "envsubst '\$YISUO_API_PASS' < /etc/nginx/templates/yisuo.conf.template > /etc/nginx/conf.d/yisuo.conf && nginx -g 'daemon off;'"
